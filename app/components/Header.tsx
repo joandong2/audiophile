@@ -9,6 +9,8 @@ import Cart from "./Cart";
 const Header = () => {
 	const pathname = usePathname();
 
+	console.log("pathname1", pathname.replace("/", ""));
+
 	return (
 		<>
 			<div
@@ -18,7 +20,7 @@ const Header = () => {
 						: "bg-black"
 				} md:bg-center contain pb-[50px] items-center ${
 					pathname.split("/").length === 3 ? `single-product` : ""
-				}`}
+				}${pathname.replace("/", "") === "checkout" ? `checkout` : ""}`}
 			>
 				<div className="max-w-[1128px] mx-auto px-10 py-14">
 					<div className="grid grid-cols-3 md:grid-cols-3 gap-4 align-middle mb-48 border-solid border-[#2d2d2d] border-b pb-4">

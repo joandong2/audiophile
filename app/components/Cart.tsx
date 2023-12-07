@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@/types";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,14 +31,14 @@ const Cart = () => {
 				</label>
 				<ul
 					tabIndex={0}
-					className="dropdown-content z-[1] menu shadow bg-base-100 rounded-box w-[380px] text-black p-6"
+					className="dropdown-content z-[1] menu shadow bg-base-100 rounded-box w-[320px] text-black p-6"
 				>
 					{isMounted && initialCart && initialCart.cart.length !== 0 ? (
 						<>
 							<li className="grid grid-cols-2 mb-4">
 								<span>
 									<p className="font-medium uppercase text-[18px]">
-										Cart({isMounted ? initialCart.length : 0})
+										Cart({isMounted ? initialCart.cart.length : 0})
 									</p>
 								</span>
 								<span className="flex justify-end">

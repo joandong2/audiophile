@@ -10,11 +10,11 @@ interface Props {
 const AddToCart = ({ prod }: Props) => {
 	const addToCart = useShopStore((state) => state.addToCart);
 
-	async function handleSubmit(e: FormData) {
-		const qty = await Number(e.get("qty"));
+	const handleSubmit = (e: FormData) => {
+		const qty = Number(e.get("qty"));
 		addToCart(prod, qty);
 		window.dispatchEvent(new Event("storage")); //This is the important part
-	}
+	};
 
 	return (
 		<div>
