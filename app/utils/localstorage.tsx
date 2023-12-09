@@ -6,14 +6,13 @@ const useLocalStorage = () => {
 	const [isMounted, setIsMounted] = useState<boolean>(false);
 	const [initialCart, setInitialCart] = useState<any>();
 
-	useLayoutEffect(() => {
+	// useLayoutEffect(() => {}, []);
+
+	useEffect(() => {
 		if (typeof window !== "undefined") {
 			setInitialCart(useShopStore.getState());
 			setIsMounted(true);
 		}
-	}, []);
-
-	useEffect(() => {
 		// setInitialCart(useShopStore.getState());
 		// setIsMounted(true);
 		// Updating a state causes a re-render, used zustand state here because its not rendering the items in cart which the localstorage get won't
