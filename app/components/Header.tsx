@@ -9,8 +9,6 @@ import Cart from "./Cart";
 const Header = () => {
 	const pathname = usePathname();
 
-	console.log("pathname1", pathname.replace("/", ""));
-
 	return (
 		<>
 			<div
