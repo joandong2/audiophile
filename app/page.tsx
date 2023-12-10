@@ -14,7 +14,7 @@ export default function Home() {
 								width="350"
 								height="490"
 								alt="Logo"
-								className="w-full h-auto"
+								className="h-auto"
 							/>
 						</div>
 						<div className="flex flex-col gap-5 text-center items-center md:text-left md:items-start md:py-10">

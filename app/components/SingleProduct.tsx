@@ -7,6 +7,8 @@ import AddToCart from "./AddToCart";
 import { USDollar } from "../utils/utilities";
 
 const SingleProduct = ({ product }: { product: Product }) => {
+	console.log("prod", product.image.desktop);
+
 	return (
 		<div className="text-black">
 			<div className="grid md:grid-cols-2 gap-16 mb-24">
