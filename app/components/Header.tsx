@@ -69,8 +69,8 @@ const Header = () => {
 								/>
 							</Link>
 						</div>
-						<div>
-							<ul className="font-bold text-[13px] uppercase tracking-[1px] mb-5 hidden md:flex md:gap-8 md:justify-center col-span-2">
+						<div className="hidden md:block">
+							<ul className="font-bold text-[13px] uppercase tracking-[1px] mb-5  md:flex md:gap-8 md:justify-center col-span-2">
 								<li>
 									<Link
 										className="hover:text-[#D87D4A]"

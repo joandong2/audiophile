@@ -6,30 +6,26 @@ import Image from "next/image";
 import { USDollar } from "../utils/utilities";
 import useLocalStorage from "../utils/localstorage";
 import { FaCheckCircle } from "react-icons/fa";
+import { useShopStore } from "../utils/store/CartStore";
 
 const Checkout = () => {
-	// const [isMounted, setIsMounted] = useState<boolean>(false);
-	// const [initialCart, setInitialCart] = useState<any>();
 	const [radioChecked, setRadioChecked] = useState<boolean>(false);
-	const [initialCart, isMounted] = useLocalStorage();
+	const [initialCart, setInitialCart, isMounted] = useLocalStorage();
 
 	const handleChange = (e: any) => {
-		const { name, value } = e.target;
+		const { value } = e.target;
 
-		if (value === "e-money") {
-			setRadioChecked(true);
-		} else {
-			setRadioChecked(false);
-		}
+		value === "e-money" ? setRadioChecked(true) : setRadioChecked(false);
 	};
 
 	const submitForm = (e: FormData) => {
-		//const qty = Number(e.get("qty"));
-		console.log(e);
-		// ts error for html elements
+		//ts error for html elements
 		if (document) {
 			(document.getElementById("checkout_form") as HTMLFormElement).showModal();
 		}
+
+		// useShopStore.getState().reset();
+		// setInitialCart("");
 	};
 
 	return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@/types";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,12 +22,6 @@ const Cart = () => {
 		updateCart(Number(e.target.id), Number(e.target.value));
 		window.dispatchEvent(new Event("storage"));
 	};
-
-	// if (typeof window !== "undefined") {
-	// 	console.log("initial cart", initialCart);
-	// 	console.log("mounted", isMounted);
-	// 	console.log(useShopStore.getState());
-	// }
 
 	return (
 		<>
@@ -106,6 +100,13 @@ const Cart = () => {
 											className="bg-[#D87D4A] text-white uppercase flex justify-center font-medium rounded-none"
 											href={`/checkout`}
 											scroll={false}
+											onClick={() =>
+												(
+													document.getElementById(
+														"checkout_form"
+													) as HTMLFormElement
+												).hideModal()
+											}
 										>
 											Checkout
 										</Link>

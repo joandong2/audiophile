@@ -100,7 +100,7 @@ h6 {
 
 .single-product .mx-auto:first-child,
 .checkout .mx-auto:first-child {
-	padding: 30px 0 0 0;
+	padding: 30px 30px 0 30px;
 }
 
 .single-product .sub-header,

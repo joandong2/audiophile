@@ -23,7 +23,7 @@ export default function Home() {
 								Upgrade to premium speakers that are phenomenally built to
 								deliver truly remarkable sound.
 							</p>
-							<p className="text-center md:text-left">
+							<p className="text-center md:text-left mb-8">
 								<a
 									href="#"
 									className="text-white bg-[#000] px-5 py-3 w-[160px] text-center uppercase text-[13px] bold tracking-[1px] hover:bg-[#4c4c4c]"
