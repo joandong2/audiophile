@@ -89,17 +89,20 @@ const Footer = () => {
 
 						<ul className="text-[24px] flex justify-end gap-3">
 							<li>
-								<a href="https://www.facebook.com/">
+								<a aria-label="Facebbok :oml" href="https://www.facebook.com/">
 									<AiFillFacebook />
 								</a>
 							</li>
 							<li>
-								<a href="https://twitter.com/">
+								<a aria-label="Twitter Link" href="https://twitter.com/">
 									<AiOutlineTwitter />
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/">
+								<a
+									aria-label="Instagram Link"
+									href="https://www.instagram.com/"
+								>
 									<AiFillInstagram />
 								</a>
 							</li>
